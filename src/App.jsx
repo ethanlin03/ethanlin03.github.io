@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div>
         <NavBar />
-        <h1 className="flex justify-center items-center h-screen">Portfolio Page</h1>
+        <h1 className="flex justify-center items-center h-screen">Home Page</h1>
       </div>
     </Router>
   )
