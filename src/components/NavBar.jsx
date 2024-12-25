@@ -60,17 +60,23 @@ const NavBar = () => {
             </li>
           </ul>
           <div className="flex items-center space-x-8">
-            <IconButton className="hover:bg-gray-200">
-              <GoogleIcon className="text-red-500"/>
-            </IconButton>
+            <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
+              <IconButton className="hover:bg-gray-200">
+                <GoogleIcon className="text-red-500" />
+              </IconButton>
+            </a>
 
-            <IconButton className="hover:bg-gray-200">
-              <LinkedInIcon className="text-blue-600"/>
-            </IconButton>
-            
-            <IconButton>
-              <GitHubIcon className="text-gray-700"/>
-            </IconButton>
+            <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
+              <IconButton className="hover:bg-gray-200">
+                <LinkedInIcon className="text-blue-600" />
+              </IconButton>
+            </a>
+
+            <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
+              <IconButton>
+                <GitHubIcon className="text-gray-700" />
+              </IconButton>
+            </a>
           </div>
         </div>
       </nav>
