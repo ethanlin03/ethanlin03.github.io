@@ -18,7 +18,7 @@ const NavBar = () => {
                 activeClassName="text-yellow-400"
               >
                 <IconButton>
-                  <HomeIcon className="text-white"/>
+                  <HomeIcon className="hover:text-gray-400 text-white"/>
                 </IconButton>
               </NavLink>
             </li>
