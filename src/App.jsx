@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import ProjectsPage from './pages/ProjectsPage'
 import ExperiencePage from './pages/ExperiencePage'
 import ResumePage from './pages/ResumePage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage/>} />
           <Route path="/experience" element={<ExperiencePage/>} />
           <Route path="/resume" element={<ResumePage/>} />
+          <Route path="/contact" element={<ContactPage/>} />
         </Routes>
       </div>
     </Router>
