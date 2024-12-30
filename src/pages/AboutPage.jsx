@@ -6,7 +6,21 @@ import GoogleIcon from '@mui/icons-material/Google';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
-import java from "../assets/2945017.webp";
+
+import assembly from "../assets/assembly-icon.png";
+import aws from "../assets/aws-icon.png"
+import cpp from "../assets/cpp-icon.png";
+import css from "../assets/css-icon.png";
+import docker from "../assets/docker-icon.png";
+import html from "../assets/html-icon.png";
+import java from "../assets/java-icon.png";
+import javascript from "../assets/javascript-logo.svg";
+import materialui from "../assets/materialui-icon.png";
+import mysql from "../assets/mysql-logo.svg";
+import nodejs from "../assets/nodejs-icon.png";
+import python from "../assets/python-icon.png";
+import react from "../assets/react-icon.png";
+import salesforce from "../assets/salesforce-icon.png";
 
 const AboutPage = () => {
     return (
@@ -92,7 +106,24 @@ const AboutPage = () => {
                     </div>
 
                     <h1 className="text-2xl font-bold mb-4">Technologies & Languages</h1>
-                    <img src={java} className="h-14 w-14"></img>
+                    <div className="flex justify-start items-center space-x-6 mb-4">
+                        <img src={java} className="h-16 w-14 "></img>
+                        <img src={cpp} className="h-16 w-14"></img>
+                        <img src={python} className="h-16 w-16"></img>
+                        <img src={javascript} className="h-16 w-16"></img>
+                        <img src={nodejs} className="h-16 w-14"></img>
+                        <img src={react} className="h-14 w-16"></img>
+                        <img src={html} className="h-14 w-14"></img>
+                        <img src={css} className="h-14 w-16"></img>
+                        <img src={materialui} className="h-14 w-16"></img>
+                    </div>
+                    <div className="flex justify-start items-center space-x-6 mb-4">
+                        <img src={mysql} className="h-16 w-16"></img>
+                        <img src={assembly} className="h-16 w-16"></img>
+                        <img src={aws} className="h-16 w-16"></img>
+                        <img src={docker} className="h-14 w-16"></img>
+                        <img src={salesforce} className="h-18 w-16"></img>
+                    </div>
                 </div>
             </div>
         </div>
