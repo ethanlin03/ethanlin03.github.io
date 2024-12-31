@@ -1,10 +1,19 @@
 import NavBar from "../components/NavBar";
+import ProjectCard from "../components/ProjectCard";
 
 const ProjectsPage = () => {
     return (
         <div>
             <NavBar/>
-            <h1 className="flex justify-center items-center h-screen">Projects Page</h1>
+            <div className="mt-32 flex justify-center">
+            <ProjectCard 
+                imageSrc=""
+                title={"PillPal"} 
+                skills={[{ text: "React" }, { text: "Flask" }, { text: "Material-UI" }, { text: "MySQL" }, { text: "JavaScript" }, { text: "Python" }]} 
+                description=""
+                link="/pillpal"
+            />
+            </div>
         </div>
     )
 };

@@ -24,16 +24,7 @@ const Technologies = () => {
         { src: html, alt: "HTML", height: "h-10", width: "w-10", label: "HTML" },
         { src: css, alt: "CSS", height: "h-10", width: "w-12", label: "CSS" },
         { src: materialui, alt: "Material UI", height: "h-10", width: "w-12", label: "Material UI" },
-        { src: mysql, alt: "MySQL", height: "h-12", width: "w-12", label: "MySQL" },
-        { src: assembly, alt: "Assembly", height: "h-12", width: "w-12", label: "Assembly" },
-        { src: aws, alt: "AWS", height: "h-12", width: "w-12", label: "AWS" },
-        { src: docker, alt: "Docker", height: "h-10", width: "w-12", label: "Docker" },
-        { src: salesforce, alt: "Salesforce", height: "h-18", width: "w-12", label: "Salesforce" },
-    ];
-    
-    const iconsRow2 = [
-        { src: materialui, alt: "Material UI", height: "h-10", width: "w-12", label: "Material UI" },
-        { src: mysql, alt: "MySQL", height: "h-12", width: "w-12", label: "MySQL" },
+        { src: mysql, alt: "MySQL", height: "h-14", width: "w-14", label: "MySQL" },
         { src: assembly, alt: "Assembly", height: "h-12", width: "w-12", label: "Assembly" },
         { src: aws, alt: "AWS", height: "h-12", width: "w-12", label: "AWS" },
         { src: docker, alt: "Docker", height: "h-10", width: "w-12", label: "Docker" },
