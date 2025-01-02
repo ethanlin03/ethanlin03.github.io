@@ -9,7 +9,10 @@ const ProjectsPage = () => {
     return (
         <div>
             <NavBar/>
-            <div className="mt-32 flex flex-col items-center gap-8 mb-20">
+            <h1 className="text-center font-bold text-[26px] mt-32">
+                Projects
+            </h1>
+            <div className="mt-10 flex flex-col items-center gap-8 mb-20">
             <ProjectCard 
                 imageSrc={pillpal}
                 title={"PillPal"} 

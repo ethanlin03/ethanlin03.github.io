@@ -10,7 +10,6 @@ const NavBar = () => {
           <NavLink
               to="/home"
               className="hover:text-gray-400 transition-colors duration-300 font-bold"
-              activeClassName="text-yellow-400"
           >
             <div className="flex items-center space-x-3 ">
               <img src={logo} className="h-10 w-10"/>
@@ -29,8 +28,10 @@ const NavBar = () => {
             ].map(({ path, label }) => (
                 <NavLink
                   to={path}
-                  className="hover:text-gray-400 transition-colors duration-300 font-bold"
-                  activeClassName="text-yellow-400"
+                  className={({ isActive }) => isActive 
+                      ? 'text-blue-400 hover:text-gray-400 transition-colors duration-300 font-bold' 
+                      : 'hover:text-gray-400 transition-colors duration-300 font-bold'
+                  }
                 >
                   {label}
                 </NavLink>
