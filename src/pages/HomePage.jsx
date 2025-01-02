@@ -8,11 +8,12 @@ import ContactPage from "./ContactPage";
 const HomePage = () => {
     return (
         <div>
-            <AboutPage id="aboutsection"/>
-            <ProjectsPage id="projectsection"/>
-            <ExperiencePage id="experiencesection"/>
-            <ResumePage id="resumesection"/>
-            <ContactPage id="contactsection"/>
+            <NavBar/>   
+            <AboutPage needNavBar={false} marginTop={32}/>
+            <ProjectsPage id="projectsection" needNavBar={false} marginTop={0}/>
+            <ExperiencePage id="experiencesection" needNavBar={false} marginTop={0}/>
+            <ResumePage id="resumesection" needNavBar={false} marginTop={10}/>
+            <ContactPage id="contactsection" needNavBar={false} marginTop={10}/>
         </div>
     )
 };

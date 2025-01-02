@@ -12,13 +12,13 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to="/about" replace />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<HomePage/>} />
-          <Route path="/about" element={<AboutPage/>} />
-          <Route path="/projects" element={<ProjectsPage/>} />
-          <Route path="/experience" element={<ExperiencePage/>} />
-          <Route path="/resume" element={<ResumePage/>} />
-          <Route path="/contact" element={<ContactPage/>} />
+          <Route path="/about" element={<AboutPage needNavBar={true} marginTop={32}/>}/>
+          <Route path="/projects" element={<ProjectsPage needNavBar={true} marginTop={32}/>} />
+          <Route path="/experience" element={<ExperiencePage needNavBar={true} marginTop={32}/>} />
+          <Route path="/resume" element={<ResumePage needNavBar={true} marginTop={32}/>}/>
+          <Route path="/contact" element={<ContactPage needNavBar={true} marginTop={32}/>}/>
         </Routes>
       </div>
     </Router>

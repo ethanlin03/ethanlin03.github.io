@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import SendIcon from '@mui/icons-material/Send';
 
-const ContactPage = () => {
+const ContactPage = ( { needNavBar, marginTop }) => {
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -29,57 +29,56 @@ const ContactPage = () => {
     };
     return (
         <div>
-            <NavBar/>
-
-            <div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-32">
-            <h2 class="text-2xl font-bold mb-2 text-center">Contact Me!</h2>
-            <h3 class="text-sm mb-6 text-center">Feel free to contact me directly at <u className="font-semibold">ethanclin03@gmail.com</u> or through this form.</h3>
-            <form ref={form} onSubmit={sendEmail}>
-                <div class="mb-4">
-                <input
-                    type="text"
-                    id="name"
-                    name="user_name"
-                    placeholder="Your name"
-                    required
-                    class="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                </div>
-
-                <div class="mb-4">
-                <input
-                    type="email"
-                    id="email"
-                    name="user_email"
-                    placeholder="Your email"
-                    required
-                    class="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                </div>
-
-                <div class="mb-4">
-                <textarea
-                    id="message"
-                    name="user_message"
-                    placeholder="Your message"
-                    rows="4"
-                    required
-                    class="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                ></textarea>
-                </div>
-
-                <div class="flex justify-start">
-                <button
-                    type="submit"
-                    class="px-6 py-3 bg-blue-500 text-white rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                >
-                    <div className="flex items-center">
-                        <span className="font-semibold">Submit</span>
-                        <SendIcon className="ml-2 text-gray-300" sx={{ fontSize: '20px' }} />
+            {needNavBar && <NavBar/>}
+            <div className={`max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg ${marginTop ? `mt-${marginTop}` : ''}`}>
+                <h2 className="text-2xl font-bold mb-2 text-center">Contact Me!</h2>
+                <h3 className="text-sm mb-6 text-center">Feel free to contact me directly at <u className="font-semibold">ethanclin03@gmail.com</u> or through this form.</h3>
+                <form ref={form} onSubmit={sendEmail}>
+                    <div className="mb-4">
+                    <input
+                        type="text"
+                        id="name"
+                        name="user_name"
+                        placeholder="Your name"
+                        required
+                        className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
                     </div>
-                </button>
-                </div>
-            </form>
+
+                    <div className="mb-4">
+                    <input
+                        type="email"
+                        id="email"
+                        name="user_email"
+                        placeholder="Your email"
+                        required
+                        className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    </div>
+
+                    <div className="mb-4">
+                    <textarea
+                        id="message"
+                        name="user_message"
+                        placeholder="Your message"
+                        rows="4"
+                        required
+                        className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    ></textarea>
+                    </div>
+
+                    <div className="flex justify-start">
+                    <button
+                        type="submit"
+                        className="px-6 py-3 bg-blue-500 text-white rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    >
+                        <div className="flex items-center">
+                            <span className="font-semibold">Submit</span>
+                            <SendIcon className="ml-2 text-gray-300" sx={{ fontSize: '20px' }} />
+                        </div>
+                    </button>
+                    </div>
+                </form>
             </div>
 
             <div className="flex justify-center items-center mt-10 mb-20">

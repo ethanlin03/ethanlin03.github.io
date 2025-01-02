@@ -8,11 +8,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import Technologies from "../components/Technologies";
 
-const AboutPage = () => {
+const AboutPage = ({ needNavBar, marginTop }) => {
     return (
         <div>
-            <NavBar />
-            <div className="max-w-3xl mx-auto mt-32">
+            {needNavBar && <NavBar/>}
+            <div className={`max-w-3xl mx-auto ${marginTop ? `mt-${marginTop}` : ''}`}>
                 <div className="container mx-auto px-4 py-8 flex items-center mb-40">
                     <div>
                         <img 

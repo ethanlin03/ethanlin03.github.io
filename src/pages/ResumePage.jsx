@@ -1,11 +1,11 @@
 import NavBar from "../components/NavBar";
 import resume from "../assets/ethan_resume.pdf";
 
-const ResumePage = () => {
+const ResumePage = ({ needNavBar, marginTop }) => {
     return (
         <div>
-            <NavBar/>
-            <h1 className="text-center font-bold text-[26px] mt-32">
+            {needNavBar && <NavBar/>}
+            <h1 className={`text-center font-bold text-[26px] ${marginTop ? `mt-${marginTop}` : ''}`}>
                 Resume
             </h1>
             <div className="mt-4 w-full h-[calc(100vh-100px)] flex justify-center items-center p-6">
