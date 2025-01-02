@@ -1,10 +1,19 @@
 import NavBar from "../components/NavBar";
+import AboutPage from "./AboutPage";
+import ProjectsPage from "./ProjectsPage";
+import ExperiencePage from "./ExperiencePage";
+import ResumePage from "./ResumePage";
+import ContactPage from "./ContactPage";
 
 const HomePage = () => {
     return (
         <div>
             <NavBar/>
-            <h1 className="flex justify-center items-center h-screen">Home Page</h1>
+            <AboutPage id="aboutsection"/>
+            <ProjectsPage id="projectsection"/>
+            <ExperiencePage id="experiencesection"/>
+            <ResumePage id="resumesection"/>
+            <ContactPage id="contactsection"/>
         </div>
     )
 };

@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import logo from "../assets/e-logo.png";
 
 const NavBar = () => {
     return (
-      <nav className="mb-20 fixed top-0 left-0 w-full bg-white text-gray-800 z-50 shadow-md">
+      <nav className="fixed top-0 left-0 w-full bg-white text-gray-800 z-50 shadow-md">
         <div className="flex justify-between items-center px-6 py-6">
           <NavLink
               to="/home"

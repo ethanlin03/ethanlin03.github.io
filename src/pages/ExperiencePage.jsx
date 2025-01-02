@@ -1,6 +1,5 @@
 import NavBar from "../components/NavBar";
 import JobIcon from "../components/JobIcon";
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 
 const ExperiencePage = () => {
     return (
