@@ -8,7 +8,6 @@ import ContactPage from "./ContactPage";
 const HomePage = () => {
     return (
         <div>
-            <NavBar/>
             <AboutPage id="aboutsection"/>
             <ProjectsPage id="projectsection"/>
             <ExperiencePage id="experiencesection"/>

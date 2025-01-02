@@ -11,7 +11,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
 
                     <div className="bg-white border-gray-300 border-4 rounded-full flex items-center justify-center h-[90px] w-[90px] ml-8 mr-10">
                         <div className="bg-white border-gray-200 shadow-md border rounded-full flex items-center justify-center h-16 w-16">
-                            <WorkOutlineIcon className="bg-white rounded-full h-10 w-10" />
+                            <WorkOutlineIcon className="bg-white rounded-full" />
                         </div>
                     </div>
 
