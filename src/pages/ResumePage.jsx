@@ -14,9 +14,6 @@ const ResumePage = () => {
                     />
                 </div>
             </div>
-            <div className="p-20">
-                reaskdfjasldfjkas
-            </div>
         </div>
     )
 };

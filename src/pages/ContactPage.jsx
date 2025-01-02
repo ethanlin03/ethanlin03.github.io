@@ -8,6 +8,7 @@ const ContactPage = () => {
     return (
         <div>
             <NavBar/>
+            
             <div className="flex justify-center items-center min-h-screen">
                 <div className="flex items-center space-x-8">
                     <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">

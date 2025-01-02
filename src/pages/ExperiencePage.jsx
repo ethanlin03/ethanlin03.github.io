@@ -6,7 +6,7 @@ const ExperiencePage = () => {
     return (
         <div>
             <NavBar/>
-            <div className="container mx-auto px-4 py-8 flex justify-center mt-40">
+            <div className="container mx-auto px-4 py-8 flex justify-center mt-40 mb-20">
                 <div className="border-2 border-gray-300 h-[1120px] z-0"/>
                 <div className="absolute top-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-28">
                     <JobIcon jobTitle="Software Quality Assurance Intern" company="WorkUp" date="October 2024 - Present" leftOrRight="left" description={
