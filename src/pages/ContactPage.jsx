@@ -55,8 +55,8 @@ const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <div className="flex items-center justify-center mb-32" style={{ minHeight: `${viewHeight}vh` }}>
-                <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+            <div className="flex items-center justify-center mb-36" style={{ minHeight: `${viewHeight}vh`}}>
+                <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg relative">
                     <h1 className="text-2xl font-bold mb-2 text-center">Contact Me!</h1>
                     <h2 className="text-sm mb-6 text-center">Feel free to contact me directly at through this form or through the links <b>below</b>.</h2>
                     <form ref={form} onSubmit={sendEmail}>
@@ -126,25 +126,26 @@ const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
                         </div>
                         </div>
                     </form>
-                </div>
-                {showToast && (
-                <div className="absolute bottom-80 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-20">
-                    Message was sent!
-                    <button
-                        className="ml-2 text-sm text-white font-bold"
-                        onClick={() => setShowToast(false)}
+                    {showToast && (
+                    <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 bg-green-500 text-white max-w-[190px] px-4 py-2 rounded shadow-lg z-20"
                     >
-                        ✕
-                    </button>
-                    <div
-                        className="h-1 bg-white rounded mt-2"
-                        style={{
-                            width: `${progress}%`,
-                            transition: "width 0.03s linear",
-                        }}
-                    />
+                        Message was sent!
+                        <button
+                            className="ml-2 text-sm text-white font-bold"
+                            onClick={() => setShowToast(false)}
+                        >
+                            ✕
+                        </button>
+                        <div
+                            className="h-1 bg-white rounded mt-2"
+                            style={{
+                                width: `${progress}%`,
+                                transition: "width 0.03s linear",
+                            }}
+                        />
+                    </div>
+                    )}
                 </div>
-                )}
             </div>
         </div>
     );
