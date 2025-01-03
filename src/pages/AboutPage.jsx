@@ -41,19 +41,19 @@ const AboutPage = ({ needNavBar, about }) => {
                             <div className="flex items-center justify-center space-x-10 top-44 relative bg-white bg-opacity-90 p-4 max-w-[300px] border border-black border-opacity-30 shadow-lg rounded-md">
                                 <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
                                     <IconButton className="hover:bg-gray-200">
-                                        <GoogleIcon className="text-red-500" style={{ fontSize: '30px' }}/>
+                                        <GoogleIcon className="text-red-500" style={{ fontSize: 28 }}/>
                                     </IconButton>
                                 </a>
 
                                 <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
                                     <IconButton className="hover:bg-gray-200">
-                                        <LinkedInIcon className="text-blue-600" style={{ fontSize: '30px' }}/>
+                                        <LinkedInIcon className="text-blue-600" style={{ fontSize: 32 }}/>
                                     </IconButton>
                                 </a>
 
                                 <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
                                     <IconButton>
-                                        <GitHubIcon className="text-gray-700" style={{ fontSize: '30px' }}/>
+                                        <GitHubIcon className="text-gray-700" style={{ fontSize: 28 }}/>
                                     </IconButton>
                                 </a>
                             </div>
@@ -70,19 +70,19 @@ const AboutPage = ({ needNavBar, about }) => {
                             <div className="flex items-center justify-center space-x-8 relative bg-white px-4 py-2 max-w-[250px] border border-black border-opacity-30 shadow-lg rounded-md z-10 bottom-2 left-4">
                                 <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
                                     <IconButton className="hover:bg-gray-200">
-                                        <GoogleIcon className="text-red-500" style={{ fontSize: '30px' }}/>
+                                        <GoogleIcon className="text-red-500" style={{ fontSize: 26 }}/>
                                     </IconButton>
                                 </a>
 
                                 <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
                                     <IconButton className="hover:bg-gray-200">
-                                        <LinkedInIcon className="text-blue-600" style={{ fontSize: '30px' }}/>
+                                        <LinkedInIcon className="text-blue-600" style={{ fontSize: 30 }}/>
                                     </IconButton>
                                 </a>
 
                                 <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
                                     <IconButton>
-                                        <GitHubIcon className="text-gray-700" style={{ fontSize: '30px' }}/>
+                                        <GitHubIcon className="text-gray-700" style={{ fontSize: 26 }}/>
                                     </IconButton>
                                 </a>
                             </div>
@@ -120,7 +120,7 @@ const AboutPage = ({ needNavBar, about }) => {
                                 <p className="text-base text-gray-600">Bachelor of Science in Computer Science</p>
                                 <p className="text-sm">Irvine, CA</p>
                             </div>
-                            <p className="text-base text-gray-600">GPA: 3.87 / 4.0</p>
+                            <p className="text-base text-gray-600">GPA: 3.86 / 4.0</p>
                         </div>
                     </div>
 

@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import SendIcon from '@mui/icons-material/Send';
 
-const ContactPage = ( { needNavBar }) => {
+const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -30,76 +30,77 @@ const ContactPage = ( { needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-                <h2 className="text-2xl font-bold mb-2 text-center">Contact Me!</h2>
-                <h3 className="text-sm mb-6 text-center">Feel free to contact me directly at <u className="font-semibold">ethanclin03@gmail.com</u> or through this form.</h3>
-                <form ref={form} onSubmit={sendEmail}>
-                    <div className="mb-4">
-                    <input
-                        type="text"
-                        id="name"
-                        name="user_name"
-                        placeholder="Your name"
-                        required
-                        className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    </div>
-
-                    <div className="mb-4">
-                    <input
-                        type="email"
-                        id="email"
-                        name="user_email"
-                        placeholder="Your email"
-                        required
-                        className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                    </div>
-
-                    <div className="mb-4">
-                    <textarea
-                        id="message"
-                        name="user_message"
-                        placeholder="Your message"
-                        rows="4"
-                        required
-                        className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    ></textarea>
-                    </div>
-
-                    <div className="flex justify-start">
-                    <button
-                        type="submit"
-                        className="px-6 py-3 bg-blue-500 text-white rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    >
-                        <div className="flex items-center">
-                            <span className="font-semibold">Submit</span>
-                            <SendIcon className="ml-2 text-gray-300" sx={{ fontSize: '20px' }} />
+            <div className="flex items-center justify-center mb-32" style={{ minHeight: `${viewHeight}vh` }}>
+                <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+                    <h1 className="text-2xl font-bold mb-2 text-center">Contact Me!</h1>
+                    <h2 className="text-sm mb-6 text-center">Feel free to contact me directly at through this form or through the links <b>below</b>.</h2>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div className="mb-4">
+                        <input
+                            type="text"
+                            id="name"
+                            name="user_name"
+                            placeholder="Your name"
+                            required
+                            className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
                         </div>
-                    </button>
-                    </div>
-                </form>
-            </div>
 
-            <div className="flex justify-center items-center mt-10 mb-20">
-                <div className="flex items-center space-x-8">
-                    <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <IconButton className="hover:bg-gray-200">
-                            <GoogleIcon className="text-red-500" />
-                        </IconButton>
-                    </a>
+                        <div className="mb-4">
+                        <input
+                            type="email"
+                            id="email"
+                            name="user_email"
+                            placeholder="Your email"
+                            required
+                            className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                        </div>
 
-                    <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
-                        <IconButton className="hover:bg-gray-200">
-                            <LinkedInIcon className="text-blue-600" />
-                        </IconButton>
-                    </a>
+                        <div className="mb-4">
+                        <textarea
+                            id="message"
+                            name="user_message"
+                            placeholder="Message"
+                            rows="4"
+                            required
+                            className="mt-1 p-3 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        ></textarea>
+                        </div>
 
-                    <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
-                        <IconButton>
-                            <GitHubIcon className="text-gray-700" />
-                        </IconButton>
-                    </a>
+                        <div className="flex justify-between">
+                        <button
+                            type="submit"
+                            className="px-6 py-3 bg-blue-500 text-white rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        >
+                            <div className="flex items-center">
+                                <span className="font-semibold">Submit</span>
+                                <SendIcon className="ml-2 text-gray-300" sx={{ fontSize: 20 }} />
+                            </div>
+                        </button>
+                        <div className="flex justify-center items-center">
+                            <div className="flex items-center space-x-6">
+                                <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    <IconButton className="hover:bg-gray-200">
+                                        <GoogleIcon className="text-red-500" style={{ fontSize: 26 }}/>
+                                    </IconButton>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
+                                    <IconButton className="hover:bg-gray-200">
+                                        <LinkedInIcon className="text-blue-600" style={{ fontSize: 30 }}/>
+                                    </IconButton>
+                                </a>
+
+                                <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
+                                    <IconButton>
+                                        <GitHubIcon className="text-gray-700" style={{ fontSize: 26 }}/>
+                                    </IconButton>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
