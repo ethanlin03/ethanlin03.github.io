@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import NavBar from "../components/NavBar";
 import GoogleIcon from '@mui/icons-material/Google';
@@ -9,9 +9,17 @@ import SendIcon from '@mui/icons-material/Send';
 
 const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
     const form = useRef();
+    const [showToast, setShowToast] = useState(false);
+    const [progress, setProgress] = useState(100);
 
     const sendEmail = (e) => {
     e.preventDefault();
+
+    const handleSuccess = () => {
+        setShowToast(true);
+        setProgress(100);
+        setTimeout(() => setShowToast(false), 3000); // Auto-hide after 3 seconds
+    };
 
     emailjs
         .sendForm('service_9e3rn8n', 'template_bmuvt6i', form.current, {
@@ -19,14 +27,31 @@ const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
         })
         .then(
             () => {
-            console.log('SUCCESS!');
+                handleSuccess();
+                e.target.reset();
             },
             (error) => {
             console.log('FAILED...', error.text);
             },
         );
-        e.target.reset();
     };
+
+    useEffect(() => {
+        if (showToast) {
+            const interval = setInterval(() => {
+                setProgress((prev) => {
+                    if (prev <= 0) {
+                        clearInterval(interval);
+                        return 0;
+                    }
+                    return prev - 1;
+                });
+            }, 30); 
+
+            return () => clearInterval(interval);
+        }
+    }, [showToast]);
+
     return (
         <div>
             {needNavBar && <NavBar/>}
@@ -86,7 +111,7 @@ const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
                                     </IconButton>
                                 </a>
 
-                                <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com/in/ethanlin03" t  arget="_blank" rel="noopener noreferrer">
                                     <IconButton className="hover:bg-gray-200">
                                         <LinkedInIcon className="text-blue-600" style={{ fontSize: 30 }}/>
                                     </IconButton>
@@ -102,6 +127,24 @@ const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
                         </div>
                     </form>
                 </div>
+                {showToast && (
+                <div className="absolute bottom-80 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-20">
+                    Message was sent!
+                    <button
+                        className="ml-2 text-sm text-white font-bold"
+                        onClick={() => setShowToast(false)}
+                    >
+                        ✕
+                    </button>
+                    <div
+                        className="h-1 bg-white rounded mt-2"
+                        style={{
+                            width: `${progress}%`,
+                            transition: "width 0.03s linear",
+                        }}
+                    />
+                </div>
+                )}
             </div>
         </div>
     );
