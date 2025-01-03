@@ -34,7 +34,7 @@ const Technologies = () => {
     return (
         <div>
             <h1 className="text-2xl font-bold mb-4">Technologies</h1>
-            <div className="flex flex-wrap justify-start items-center gap-6 mb-20">
+            <div className="flex flex-wrap justify-start items-center gap-6">
                 {iconsRow1.map((icon, index) => (
                     <div key={index} className="flex flex-col items-center mb-4">
                         <div className="bg-gray-300 border-gray-400 border rounded-full flex items-center justify-center h-20 w-20">

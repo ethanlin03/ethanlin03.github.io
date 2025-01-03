@@ -5,11 +5,11 @@ import goodeats from "../assets/goodeats.png";
 import invitation from "../assets/invitation.png";
 import rps from "../assets/rps.png";
 
-const ProjectsPage = ({ needNavBar, marginTop }) => {
+const ProjectsPage = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <h1 className={`text-center font-bold text-[26px] ${marginTop ? `mt-${marginTop}` : ''}`}>
+            <h1 className="text-center font-bold text-[26px]">
                 Projects
             </h1>
             <div className="mt-10 flex flex-col items-center gap-8 mb-20">

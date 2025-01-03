@@ -14,11 +14,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<HomePage/>} />
-          <Route path="/about" element={<AboutPage needNavBar={true} marginTop={32}/>}/>
-          <Route path="/projects" element={<ProjectsPage needNavBar={true} marginTop={32}/>} />
-          <Route path="/experience" element={<ExperiencePage needNavBar={true} marginTop={32}/>} />
-          <Route path="/resume" element={<ResumePage needNavBar={true} marginTop={32}/>}/>
-          <Route path="/contact" element={<ContactPage needNavBar={true} marginTop={32}/>}/>
+          <Route path="/about" element={<AboutPage needNavBar={true} about={true}/>}/>
+          <Route path="/projects" element={<ProjectsPage needNavBar={true}/>} />
+          <Route path="/experience" element={<ExperiencePage needNavBar={true}/>} />
+          <Route path="/resume" element={<ResumePage needNavBar={true}/>}/>
+          <Route path="/contact" element={<ContactPage needNavBar={true}/>}/>
         </Routes>
       </div>
     </Router>

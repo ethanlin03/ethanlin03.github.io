@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import SendIcon from '@mui/icons-material/Send';
 
-const ContactPage = ( { needNavBar, marginTop }) => {
+const ContactPage = ( { needNavBar }) => {
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -30,7 +30,7 @@ const ContactPage = ( { needNavBar, marginTop }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <div className={`max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg ${marginTop ? `mt-${marginTop}` : ''}`}>
+            <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
                 <h2 className="text-2xl font-bold mb-2 text-center">Contact Me!</h2>
                 <h3 className="text-sm mb-6 text-center">Feel free to contact me directly at <u className="font-semibold">ethanclin03@gmail.com</u> or through this form.</h3>
                 <form ref={form} onSubmit={sendEmail}>

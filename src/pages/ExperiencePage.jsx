@@ -1,11 +1,11 @@
 import NavBar from "../components/NavBar";
 import JobIcon from "../components/JobIcon";
 
-const ExperiencePage = ({ needNavBar, marginTop }) => {
+const ExperiencePage = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <h1 className={`text-center font-bold text-[26px] ${marginTop ? `mt-${marginTop}` : ''}`}>
+            <h1 className="text-center font-bold text-[26px]">
                 Experience
             </h1>
             <div className="container mx-auto px-4 py-8 flex justify-center mt-10 mb-20">

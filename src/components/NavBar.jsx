@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 
 import logo from "../assets/e-logo.png";
 
 const NavBar = () => {
     return (
+      <div className="mb-32">
       <nav className="fixed top-0 left-0 w-full bg-white text-gray-800 z-50 shadow-md">
         <div className="flex justify-between items-center px-6 py-6">
           <NavLink
@@ -21,6 +21,7 @@ const NavBar = () => {
           </NavLink>
           <div className="flex items-center space-x-8">
             {[
+              { path: '/home', label: 'Home' },
               { path: '/about', label: 'About' },
               { path: '/projects', label: 'Projects' },
               { path: '/experience', label: 'Experience' },
@@ -40,6 +41,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
+      </div>
     );
 };
 

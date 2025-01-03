@@ -8,20 +8,87 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import Technologies from "../components/Technologies";
 
-const AboutPage = ({ needNavBar, marginTop }) => {
+const AboutPage = ({ needNavBar, about }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <div className={`max-w-3xl mx-auto ${marginTop ? `mt-${marginTop}` : ''}`}>
-                <div className="container mx-auto px-4 py-8 flex items-center mb-40">
-                    <div>
-                        <img 
-                            src={me} 
-                            className="h-[500px] w-[400px] object-cover rounded-md z-0 absolute"
-                            alt="Ethan"
-                        />
+            <div className="max-w-3xl mx-auto">
+                    {about ? (
+                    <div className="container mx-auto px-4 py-8 flex items-center mb-44">
+                        <div>
+                            <img 
+                                src={me} 
+                                className="h-[500px] w-[400px] object-cover rounded-md z-0 absolute"
+                                alt="Ethan"
+                            />
+                            <div 
+                                className="relative bg-white bg-opacity-95 p-4 max-w-md shadow-lg z-10 top-64 left-80 rounded-md"
+                                style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
+                            >
+                                <h1 className="text-2xl font-bold mb-2">About Me</h1>
+                                <p className="mb-4">
+                                    Hi, I'm Ethan! I'm a Computer Science student at the University of California, Irvine. 
+                                    My journey for programming started in 2015, where my curiosity for games met my love 
+                                    for creativity and creation.
+                                </p>
+                                <p className="mb-4">
+                                    I've been able to use my skills to create a twist on a classic game, Rock Paper Scissors, 
+                                    to creating a website to help track my medications. Through each project, I've been able to build upon my technical skills while pushing 
+                                    my innovativeness and creativity. Let's connect and create fresh, exciting applications 
+                                    for the world!
+                                </p>
+                            </div>
+                            <div className="flex items-center justify-center space-x-10 top-44 relative bg-white bg-opacity-90 p-4 max-w-[300px] border border-black border-opacity-30 shadow-lg rounded-md">
+                                <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    <IconButton className="hover:bg-gray-200">
+                                        <GoogleIcon className="text-red-500" style={{ fontSize: '30px' }}/>
+                                    </IconButton>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
+                                    <IconButton className="hover:bg-gray-200">
+                                        <LinkedInIcon className="text-blue-600" style={{ fontSize: '30px' }}/>
+                                    </IconButton>
+                                </a>
+
+                                <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
+                                    <IconButton>
+                                        <GitHubIcon className="text-gray-700" style={{ fontSize: '30px' }}/>
+                                    </IconButton>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    ) : (
+                    <div className="container mx-auto p-4 flex items-center">
+                        <div>
+                            <img 
+                                src={me} 
+                                className="h-[300px] w-[300px] object-cover rounded-full z-0 relative top-4"
+                                alt="Ethan"
+                            />
+                            <div className="flex items-center justify-center space-x-8 relative bg-white px-4 py-2 max-w-[250px] border border-black border-opacity-30 shadow-lg rounded-md z-10 bottom-2 left-4">
+                                <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    <IconButton className="hover:bg-gray-200">
+                                        <GoogleIcon className="text-red-500" style={{ fontSize: '30px' }}/>
+                                    </IconButton>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
+                                    <IconButton className="hover:bg-gray-200">
+                                        <LinkedInIcon className="text-blue-600" style={{ fontSize: '30px' }}/>
+                                    </IconButton>
+                                </a>
+
+                                <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
+                                    <IconButton>
+                                        <GitHubIcon className="text-gray-700" style={{ fontSize: '30px' }}/>
+                                    </IconButton>
+                                </a>
+                            </div>
+                        </div>
                         <div 
-                            className="relative bg-white bg-opacity-95 p-4 max-w-md shadow-lg z-10 top-64 left-80 rounded-md"
+                            className="relative bg-white bg-opacity-95 p-4 max-w-md shadow-lg left-4 rounded-md"
                             style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
                         >
                             <h1 className="text-2xl font-bold mb-2">About Me</h1>
@@ -36,29 +103,10 @@ const AboutPage = ({ needNavBar, marginTop }) => {
                                 my innovativeness and creativity. Let's connect and create fresh, exciting applications 
                                 for the world!
                             </p>
-                        </div>
-                        <div className="flex items-center justify-center space-x-10 top-44 relative bg-white bg-opacity-90 p-4 max-w-[300px] border border-black border-opacity-30 shadow-lg rounded-md">
-                            <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <IconButton className="hover:bg-gray-200">
-                                    <GoogleIcon className="text-red-500" style={{ fontSize: '30px' }}/>
-                                </IconButton>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
-                                <IconButton className="hover:bg-gray-200">
-                                    <LinkedInIcon className="text-blue-600" style={{ fontSize: '30px' }}/>
-                                </IconButton>
-                            </a>
-
-                            <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
-                                <IconButton>
-                                    <GitHubIcon className="text-gray-700" style={{ fontSize: '30px' }}/>
-                                </IconButton>
-                            </a>
-                        </div>
+                        </div>                        
                     </div>
-                </div>
-                <div className="container px-4 py-8">
+                    )}
+                <div className="container px-4 pb-8 mb-10">
                     <h1 className="text-2xl font-bold mb-4">Education</h1>
 
                     <div className="flex items-start mb-4">
@@ -94,8 +142,6 @@ const AboutPage = ({ needNavBar, marginTop }) => {
                 </div>
             </div>
         </div>
-    );
-    
+    );  
 };
-
 export default AboutPage;
