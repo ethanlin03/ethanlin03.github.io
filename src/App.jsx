@@ -18,7 +18,6 @@ function App() {
           <Route path="/projects" element={<ProjectsPage needNavBar={true}/>} />
           <Route path="/experience" element={<ExperiencePage needNavBar={true}/>} />
           <Route path="/resume" element={<ResumePage needNavBar={true}/>}/>
-          <Route path="/contact" element={<ContactPage needNavBar={true} viewHeight={80}/>}/>
         </Routes>
       </div>
     </Router>
