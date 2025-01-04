@@ -29,6 +29,7 @@ const NavBar = () => {
               { path: '/contact', label: 'Contact' },
             ].map(({ path, label }) => (
                 <NavLink
+                  key={path}
                   to={path}
                   className={({ isActive }) => isActive 
                       ? 'text-blue-400 hover:text-gray-400 transition-colors duration-300 font-bold' 

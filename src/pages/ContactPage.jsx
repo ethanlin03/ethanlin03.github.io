@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import SendIcon from '@mui/icons-material/Send';
 
-const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
+const ContactPage = ( { needNavBar, viewHeight }) => {
     const form = useRef();
     const [showToast, setShowToast] = useState(false);
     const [progress, setProgress] = useState(100);
@@ -22,9 +22,9 @@ const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
     };
 
     emailjs
-        .sendForm('service_9e3rn8n', 'template_bmuvt6i', form.current, {
-            publicKey: 'N969MZq5PJMFQNcCB',
-        })
+        .sendForm('service_9e3rn8n', 'template_bmuvt6i', form.current,
+            publicKey='N969MZq5PJMFQNcCB',
+        )
         .then(
             () => {
                 handleSuccess();
@@ -111,7 +111,7 @@ const ContactPage = ( { needNavBar, viewHeight, marginBottom }) => {
                                     </IconButton>
                                 </a>
 
-                                <a href="https://www.linkedin.com/in/ethanlin03" t  arget="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
                                     <IconButton className="hover:bg-gray-200">
                                         <LinkedInIcon className="text-blue-600" style={{ fontSize: 30 }}/>
                                     </IconButton>

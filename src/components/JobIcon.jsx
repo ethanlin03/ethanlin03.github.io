@@ -24,7 +24,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
                         >
                             <h1 className="text-xl font-bold">{jobTitle}</h1>
                             <h1 className="text-md font-semibold mb-4 italic">{company}</h1>
-                            <p className="mb-4 text-sm">{description}</p>
+                            <span className="mb-4 text-sm">{description}</span>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
                         >
                             <h1 className="text-xl font-bold">{jobTitle}</h1>
                             <h1 className="text-md font-semibold mb-4 italic">{company}</h1>
-                            <p className="mb-4 text-sm">{description}</p>
+                            <span className="mb-4 text-sm">{description}</span>
                         </div>
 
                         <div className="w-0 h-0 border-t-[10px] border-b-[10px] border-l-[10px] border-t-transparent border-b-transparent border-l-gray-500 mt-8"/>
