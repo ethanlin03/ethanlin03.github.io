@@ -22,9 +22,9 @@ const ContactPage = ( { needNavBar, viewHeight }) => {
     };
 
     emailjs
-        .sendForm('service_9e3rn8n', 'template_bmuvt6i', form.current,
-            publicKey='N969MZq5PJMFQNcCB',
-        )
+        .sendForm('service_9e3rn8n', 'template_bmuvt6i', form.current, {
+            publicKey: 'N969MZq5PJMFQNcCB',
+        })
         .then(
             () => {
                 handleSuccess();
