@@ -11,16 +11,16 @@ const ExperiencePage = ({ needNavBar }) => {
             <div className="container mx-auto px-4 py-8 flex justify-center mt-10 mb-20">
                 <div className="border-2 border-gray-300 h-[1120px] z-0"/>
                 <div className="absolute top-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-28">
-                    <JobIcon jobTitle="Software Quality Assurance Intern" company="WorkUp" date="October 2024 - Present" leftOrRight="left" description={
+                    <JobIcon jobTitle="Software Quality Assurance Intern" company="WorkUp" date="October 2024 - February 2025" leftOrRight="left" description={
                         <ul className="list-disc pl-5">
                             <li>
-                                Developing features like "double clicking to like" in React, JavaScript, and FireBase to improve WorkUp’s app and upon the UI before launch
+                                Utilized React, JavaScript, and FireBase to develop features like double-clicking for video likes and AI sections of WorkUp’s app whilst helping ensure seamless UI
                             </li>
                             <li>
-                                Gained familiarity with QA procedures and regularly QA tested the IOS/Web version of WorkUp
+                                Engaged daily in QA procedures/tests to improve the IOS/Web versions of our app to ensure flawless experience
                             </li>
                             <li>
-                                Writing in-depth reports for developers to understand reasons for crashes and fostering a culture of high standards
+                                Writing in-depth reports for other developers to understand crashes and fostering a culture of high standards
                             </li>
                         </ul>}/>
                     <JobIcon jobTitle="Development Intern" company="Make-A-Wish" date="September 2024 - November 2024" leftOrRight="right" description={
