@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 import logo from "../assets/e-logo.png";
 
@@ -36,7 +37,12 @@ const NavBar = () => {
                       : 'hover:text-gray-400 transition-colors duration-300 font-bold'
                   }
                 >
-                  {label}
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    {label}
+                  </motion.button>
                 </NavLink>
             ))}
           </div>
