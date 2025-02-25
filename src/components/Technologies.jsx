@@ -12,6 +12,7 @@ import nodejs from "../assets/nodejs-icon.png";
 import python from "../assets/python-icon.png";
 import react from "../assets/react-icon.png";
 import salesforce from "../assets/salesforce-icon.png";
+import { motion } from "framer-motion";
 
 const Technologies = () => {
     const iconsRow1 = [
@@ -37,12 +38,30 @@ const Technologies = () => {
             <div className="flex flex-wrap justify-start items-center gap-6">
                 {iconsRow1.map((icon, index) => (
                     <div key={index} className="flex flex-col items-center mb-4">
-                        <div className="bg-gray-300 border-gray-400 border rounded-full flex items-center justify-center h-20 w-20">
-                            <div className="bg-white border-gray-500 border rounded-full flex items-center justify-center h-16 w-16">
-                                <img src={icon.src} alt={icon.alt} className={`${icon.height} ${icon.width}`} />
-                            </div>
-                        </div>
-                        <p className="text-md mt-2 justify-self-center">{icon.label}</p>
+                        <motion.div
+                            whileHover={{ scale: 1.2, fontWeight: 600 }}
+                        >
+                            <motion.div
+                                initial={{ rotate: 0, opacity: 0 }}
+                                whileInView={{ opacity: 1, rotateY: 360}}
+                                transition={{ duration: 0.5 }}
+                                className="inline-block"
+                            >
+                                <div className="bg-gray-300 border-gray-400 border rounded-full flex items-center justify-center h-20 w-20">
+                                    <div className="bg-white border-gray-500 border rounded-full flex items-center justify-center h-16 w-16">
+                                    <motion.div
+                                        initial={{ rotate: 0, opacity: 0 }}
+                                        whileInView={{ opacity: 1, rotateY: -360}}
+                                        transition={{ duration: 1, ease: "linear" }}
+                                        className="inline-block"
+                                    >
+                                            <img src={icon.src} alt={icon.alt} className={`${icon.height} ${icon.width}`} />
+                                    </motion.div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                            <p className="text-md mt-2 justify-self-center">{icon.label}</p>
+                        </motion.div>
                     </div>
                 ))}
             </div>
