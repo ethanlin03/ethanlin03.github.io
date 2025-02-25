@@ -43,7 +43,7 @@ const Technologies = () => {
                         >
                             <motion.div
                                 initial={{ rotate: 0, opacity: 0 }}
-                                whileInView={{ opacity: 1, rotateY: 360}}
+                                whileInView={{ opacity: 1}}
                                 transition={{ duration: 1 }}
                                 viewport={{ once: true }}
                                 className="inline-block"
@@ -53,7 +53,7 @@ const Technologies = () => {
                                     <motion.div
                                         initial={{ rotate: 0, opacity: 0 }}
                                         whileInView={{ opacity: 1, rotateY: -360}}
-                                        transition={{ duration: 1.5, ease: "linear" }}
+                                        transition={{ duration: 1.2, ease: "easeOut" }}
                                         viewport={{ once: true}}
                                         className="inline-block"
                                     >
