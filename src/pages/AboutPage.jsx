@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import Technologies from "../components/Technologies";
+import { motion } from "framer-motion";
 
 const AboutPage = ({ needNavBar, about }) => {
     return (
@@ -16,14 +17,22 @@ const AboutPage = ({ needNavBar, about }) => {
                     {about ? (
                     <div className="container mx-auto px-4 py-8 flex items-center mb-44">
                         <div>
-                            <img 
+                            <motion.img
                                 src={me} 
                                 className="h-[500px] w-[400px] object-cover rounded-md z-0 absolute"
                                 alt="Ethan"
+                                initial={{ opacity: 0, y: -40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: true }}
                             />
-                            <div 
+                            <motion.div 
                                 className="relative bg-white bg-opacity-95 p-4 max-w-md shadow-lg z-10 top-64 left-80 rounded-md"
                                 style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
+                                initial={{ opacity: 0, x: 40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: true }}
                             >
                                 <h1 className="text-2xl font-bold mb-2">About Me</h1>
                                 <p className="mb-4">
@@ -37,26 +46,50 @@ const AboutPage = ({ needNavBar, about }) => {
                                     my innovativeness and creativity. Let's connect and create fresh, exciting applications 
                                     for the world!
                                 </p>
-                            </div>
-                            <div className="flex items-center justify-center space-x-10 top-44 relative bg-white bg-opacity-90 p-4 max-w-[300px] border border-black border-opacity-30 shadow-lg rounded-md">
-                                <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
-                                    <IconButton className="hover:bg-gray-200">
+                            </motion.div>
+                            <motion.div 
+                                initial={{ opacity: 0, x: -40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                                className="flex items-center justify-center space-x-10 top-44 relative bg-white bg-opacity-90 p-4 max-w-[300px] border border-black border-opacity-30 shadow-lg rounded-md"
+                            >
+                                <motion.a 
+                                    initial={{ opacity: 0, x: -40 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                    href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer"
+                                >
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125 transition-transform duration-1000">
                                         <GoogleIcon className="text-red-500" style={{ fontSize: 28 }}/>
                                     </IconButton>
-                                </a>
+                                </motion.a>
 
-                                <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
-                                    <IconButton className="hover:bg-gray-200">
+                                <motion.a 
+                                    initial={{ opacity: 0, x: -40 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                    href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer"
+                                >
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125 transition-transform duration-1000">
                                         <LinkedInIcon className="text-blue-600" style={{ fontSize: 32 }}/>
                                     </IconButton>
-                                </a>
+                                </motion.a>
 
-                                <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
-                                    <IconButton>
+                                <motion.a 
+                                    initial={{ opacity: 0, x: -40 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                    href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer"
+                                >
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125 transition-transform duration-1000">
                                         <GitHubIcon className="text-gray-700" style={{ fontSize: 28 }}/>
                                     </IconButton>
-                                </a>
-                            </div>
+                                </motion.a>
+                            </motion.div>
                         </div>
                     </div>
                     ) : (

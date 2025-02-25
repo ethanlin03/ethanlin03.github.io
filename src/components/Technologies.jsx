@@ -44,7 +44,8 @@ const Technologies = () => {
                             <motion.div
                                 initial={{ rotate: 0, opacity: 0 }}
                                 whileInView={{ opacity: 1, rotateY: 360}}
-                                transition={{ duration: 0.5 }}
+                                transition={{ duration: 1 }}
+                                viewport={{ once: true }}
                                 className="inline-block"
                             >
                                 <div className="bg-gray-300 border-gray-400 border rounded-full flex items-center justify-center h-20 w-20">
@@ -52,7 +53,8 @@ const Technologies = () => {
                                     <motion.div
                                         initial={{ rotate: 0, opacity: 0 }}
                                         whileInView={{ opacity: 1, rotateY: -360}}
-                                        transition={{ duration: 1, ease: "linear" }}
+                                        transition={{ duration: 1.5, ease: "linear" }}
+                                        viewport={{ once: true}}
                                         className="inline-block"
                                     >
                                             <img src={icon.src} alt={icon.alt} className={`${icon.height} ${icon.width}`} />
