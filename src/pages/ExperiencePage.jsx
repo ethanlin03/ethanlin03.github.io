@@ -14,7 +14,7 @@ const ExperiencePage = ({ needNavBar }) => {
                 <div className="absolute top-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-28">
                     <JobIcon jobTitle="Software Quality Assurance Intern" company="WorkUp" date="October 2024 - February 2025" leftOrRight="left" description={
                         <motion.ul 
-                            initial={{ opacity: 0, x: 40 }}
+                            initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1.2, ease: "easeOut" }}
                             viewport={{ once: false }} 
@@ -31,7 +31,13 @@ const ExperiencePage = ({ needNavBar }) => {
                             </li>
                         </motion.ul>}/>
                     <JobIcon jobTitle="Development Intern" company="Make-A-Wish" date="September 2024 - November 2024" leftOrRight="right" description={
-                        <ul className="list-disc pl-5">
+                        <motion.ul 
+                            initial={{ opacity: 0, x: 40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            viewport={{ once: false }} 
+                            className="list-disc pl-5"
+                        >
                             <li>
                                 Worked and gained familiarity with SalesForce to help keep track of sponsorships and maintain relationships
                             </li>
@@ -41,9 +47,15 @@ const ExperiencePage = ({ needNavBar }) => {
                             <li>
                                 Using Canva with other creative applications to design and create Make-A-Wish stories along with showcases of events
                             </li>
-                        </ul>}/>
+                        </motion.ul>}/>
                     <JobIcon jobTitle="Research Intern" company="National Science Foundation" date="June 2022 - August 2022" leftOrRight="left" description={
-                        <ul className="list-disc pl-5">
+                        <motion.ul 
+                            initial={{ opacity: 0, x: -40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            viewport={{ once: false }} 
+                            className="list-disc pl-5"
+                        >
                             <li>
                                 Developed a set of procedures that basic programmers can follow to analyze assembly and binary
                             </li>
@@ -56,7 +68,7 @@ const ExperiencePage = ({ needNavBar }) => {
                             <li>
                                 Collaborated with peers to meet weekly goals while demonstrating leadership when groupmates needed help
                             </li>
-                        </ul>}/>
+                        </motion.ul>}/>
                     <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
                 </div>
             </div>
