@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar";
 import JobIcon from "../components/JobIcon";
+import { motion } from "framer-motion";
 
 const ExperiencePage = ({ needNavBar }) => {
     return (
@@ -12,7 +13,13 @@ const ExperiencePage = ({ needNavBar }) => {
                 <div className="border-2 border-gray-300 h-[1120px] z-0"/>
                 <div className="absolute top-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-28">
                     <JobIcon jobTitle="Software Quality Assurance Intern" company="WorkUp" date="October 2024 - February 2025" leftOrRight="left" description={
-                        <ul className="list-disc pl-5">
+                        <motion.ul 
+                            initial={{ opacity: 0, x: 40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            viewport={{ once: false }} 
+                            className="list-disc pl-5"
+                        >
                             <li>
                                 Utilized React, JavaScript, and FireBase to develop features like double-clicking for video likes and AI sections of WorkUp’s app whilst helping ensure seamless UI
                             </li>
@@ -22,7 +29,7 @@ const ExperiencePage = ({ needNavBar }) => {
                             <li>
                                 Writing in-depth reports for other developers to understand crashes and fostering a culture of high standards
                             </li>
-                        </ul>}/>
+                        </motion.ul>}/>
                     <JobIcon jobTitle="Development Intern" company="Make-A-Wish" date="September 2024 - November 2024" leftOrRight="right" description={
                         <ul className="list-disc pl-5">
                             <li>
