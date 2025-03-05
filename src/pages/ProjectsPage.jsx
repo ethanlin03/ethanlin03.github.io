@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import pillpal from "../assets/pillpal.png";
 import goodeats from "../assets/goodeats.png";
 import invitation from "../assets/invitation.png";
+import checkers from "../assets/checkers.svg";
 import rps from "../assets/rps.png";
 
 const ProjectsPage = ({ needNavBar }) => {
@@ -29,6 +30,14 @@ const ProjectsPage = ({ needNavBar }) => {
                 description="GoodEats is a nutrition tracking app that helps users track daily nutritional intake and curate personalized meals to meet specific goals. 
                 Users can log in and input their stats i.e. height, weight, budget, etc. and through the use of Gemini AI it will curate three potential meals with nutritional facts breakdown.
                 Additionally, users can regenerate new meals if they feel that the generated ones aren't to their taste!"
+            />
+
+            <ProjectCard 
+                imageSrc={checkers}
+                title={"Checkers AI"} 
+                skills={[{ text: "Python" }, { text: "AI" }, { text: "MCTS" }, { text: "MiniMax" }]} 
+                description="I utilized Python and its libraries to create an AI capable of a 60% win rate against players in Checkers. For the AI's decision-making, it utilizes Minimax with AlphaBeta pruning and MCTS.
+                I also provided players the option to keep playing or end the round with player data like rounds played, rounds won, ties, etc."
             />
 
             <ProjectCard 
