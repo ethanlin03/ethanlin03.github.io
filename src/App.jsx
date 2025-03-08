@@ -6,10 +6,24 @@ import ExperiencePage from './pages/ExperiencePage'
 import ResumePage from './pages/ResumePage'
 import ContactPage from './pages/ContactPage'
 
-function App() {
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+
+function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
