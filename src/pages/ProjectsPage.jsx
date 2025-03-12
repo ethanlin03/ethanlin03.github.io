@@ -5,14 +5,21 @@ import goodeats from "../assets/goodeats.png";
 import invitation from "../assets/invitation.png";
 import checkers from "../assets/checkers.svg";
 import rps from "../assets/rps.png";
+import { motion } from "framer-motion";
 
 const ProjectsPage = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <h1 className="text-center font-bold text-[26px]">
+            <motion.h1 
+                initial={{ opacity: 0, y: -60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-center font-bold text-[26px]"
+            >
                 Projects
-            </h1>
+            </motion.h1>
             <div className="mt-10 flex flex-col items-center gap-8 mb-20">
             <ProjectCard 
                 imageSrc={pillpal}

@@ -6,9 +6,15 @@ const ExperiencePage = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
-            <h1 className="text-center font-bold text-[26px]">
+            <motion.h1 
+                initial={{ opacity: 0, y: -60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-center font-bold text-[26px]"
+            >
                 Experience
-            </h1>
+            </motion.h1>
             <div className="container mx-auto px-4 py-8 flex justify-center mt-10 mb-20">
                 <div className="border-2 border-gray-300 h-[1120px] z-0"/>
                 <div className="absolute top-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-28">

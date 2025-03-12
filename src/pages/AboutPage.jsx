@@ -34,7 +34,15 @@ const AboutPage = ({ needNavBar, about }) => {
                                 className="relative bg-white bg-opacity-95 p-4 max-w-md shadow-lg z-10 top-64 left-80 rounded-md"
                                 style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
                             >
-                                <h1 className="text-2xl font-bold mb-2">About Me</h1>
+                                <motion.h1 
+                                    initial={{ opacity: 0, y: -40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    viewport={{ once: true }}
+                                    className="text-2xl font-bold mb-2"
+                                >
+                                    About Me
+                                </motion.h1>
                                 <p className="mb-4">
                                     Hi, I'm Ethan! I'm a Computer Science student at the University of California, Irvine. 
                                     My journey for programming started in 2015, where my curiosity for games met my love 
@@ -156,7 +164,15 @@ const AboutPage = ({ needNavBar, about }) => {
                             className="relative bg-white bg-opacity-95 p-4 max-w-md shadow-lg left-4 rounded-md"
                             style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
                         >
-                            <h1 className="text-2xl font-bold mb-2">About Me</h1>
+                            <motion.h1 
+                                initial={{ opacity: 0, y: -40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                                className="text-2xl font-bold mb-2"
+                            >
+                                About Me
+                            </motion.h1>
                             <p className="mb-4">
                                 Hi, I'm Ethan! I'm a Computer Science student at the University of California, Irvine. 
                                 My journey for programming started in 2015, where my curiosity for games met my love 
@@ -172,7 +188,15 @@ const AboutPage = ({ needNavBar, about }) => {
                     </div>
                     )}
                 <div className="container px-4 pb-8 mb-10">
-                    <h1 className="text-2xl font-bold mb-4">Education</h1>
+                    <motion.h1 
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="text-2xl font-bold mb-2"
+                    >
+                        Education
+                    </motion.h1>
 
                     <div className="flex items-start mb-4">
                         <img src={uci} alt="UCI Icon" className="w-12 h-12 mr-4 mt-2" />

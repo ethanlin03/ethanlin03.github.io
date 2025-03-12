@@ -34,7 +34,15 @@ const Technologies = () => {
     
     return (
         <div>
-            <h1 className="text-2xl font-bold mb-4">Technologies</h1>
+            <motion.h1 
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-2xl font-bold mb-4"
+            >
+                Technologies
+            </motion.h1>
             <div className="flex flex-wrap justify-start items-center gap-6">
                 {iconsRow1.map((icon, index) => (
                     <div key={index} className="flex flex-col items-center mb-4">
