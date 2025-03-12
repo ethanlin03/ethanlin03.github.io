@@ -118,7 +118,7 @@ const AboutPage = ({ needNavBar, about }) => {
                                     viewport={{ once: true }}
                                     href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer"
                                 >
-                                    <IconButton className="hover:bg-gray-200">
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125">
                                         <GoogleIcon className="text-red-500" style={{ fontSize: 26 }}/>
                                     </IconButton>
                                 </motion.a>
@@ -130,7 +130,7 @@ const AboutPage = ({ needNavBar, about }) => {
                                     viewport={{ once: true }}
                                     href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer"
                                 >
-                                    <IconButton className="hover:bg-gray-200">
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125">
                                         <LinkedInIcon className="text-blue-600" style={{ fontSize: 30 }}/>
                                     </IconButton>
                                 </motion.a>
@@ -142,7 +142,7 @@ const AboutPage = ({ needNavBar, about }) => {
                                     viewport={{ once: true }}
                                     href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer"
                                 >
-                                    <IconButton>
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125"> 
                                         <GitHubIcon className="text-gray-700" style={{ fontSize: 26 }}/>
                                     </IconButton>
                                 </motion.a>

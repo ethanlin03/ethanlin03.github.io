@@ -96,7 +96,7 @@ const ContactPage = ( { needNavBar, viewHeight }) => {
                         <div className="flex justify-between">
                         <button
                             type="submit"
-                            className="px-6 py-3 bg-blue-500 text-white rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            className="px-6 py-3 bg-blue-500 text-white rounded-3xl hover:bg-blue-600 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         >
                             <div className="flex items-center">
                                 <span className="font-semibold">Submit</span>
@@ -106,19 +106,19 @@ const ContactPage = ( { needNavBar, viewHeight }) => {
                         <div className="flex justify-center items-center">
                             <div className="flex items-center space-x-6">
                                 <a href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer">
-                                    <IconButton className="hover:bg-gray-200">
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125">
                                         <GoogleIcon className="text-red-500" style={{ fontSize: 26 }}/>
                                     </IconButton>
                                 </a>
 
                                 <a href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer">
-                                    <IconButton className="hover:bg-gray-200">
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125">
                                         <LinkedInIcon className="text-blue-600" style={{ fontSize: 30 }}/>
                                     </IconButton>
                                 </a>
 
                                 <a href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer">
-                                    <IconButton>
+                                    <IconButton className="hover:bg-gray-200 hover:scale-125">
                                         <GitHubIcon className="text-gray-700" style={{ fontSize: 26 }}/>
                                     </IconButton>
                                 </a>
