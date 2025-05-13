@@ -5,6 +5,7 @@ import goodeats from "../assets/goodeats.png";
 import invitation from "../assets/invitation.png";
 import checkers from "../assets/checkers.svg";
 import rps from "../assets/rps.png";
+import kapechat from "../assets/kapechat.png"
 import { motion } from "framer-motion";
 
 const ProjectsPage = ({ needNavBar }) => {
@@ -21,6 +22,14 @@ const ProjectsPage = ({ needNavBar }) => {
                 Projects
             </motion.h1>
             <div className="mt-10 flex flex-col items-center gap-8 mb-20">
+            <ProjectCard 
+                imageSrc={kapechat}
+                title={"KapeChat"} 
+                skills={[{ text: "React" }, { text: "TailwindCSS" }, { text: "JavaScript" }, { text: "Firebase" }, { text: "Fastify" }]} 
+                description="KapeChat is a web-based platform designed to focus on mentorship and community through casual, planned coffee chats. Job seekers can explore and network all within a warm, user-friendly interface. 
+                It aims to help people with developing their career and tackling the job market with a friendly face.
+                "
+            />
             <ProjectCard 
                 imageSrc={pillpal}
                 title={"PillPal"} 
