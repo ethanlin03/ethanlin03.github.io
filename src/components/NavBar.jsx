@@ -20,7 +20,7 @@ const NavBar = () => {
               </span>
             </div>
           </NavLink>
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-10">
             {[
               { path: '/home', label: 'Home' },
               { path: '/about', label: 'About' },
@@ -32,9 +32,10 @@ const NavBar = () => {
                 <NavLink
                   key={path}
                   to={path}
-                  className={({ isActive }) => isActive 
-                      ? 'text-blue-400 hover:text-gray-400 transition-colors duration-300 font-bold' 
-                      : 'hover:text-gray-400 transition-colors duration-300 font-bold'
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'relative text-blue-400 font-bold after:content-[""] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-4 after:h-1 after:bg-blue-400 after:rounded-full'
+                      : 'text-gray-800 hover:text-gray-400 font-bold'
                   }
                 >
                   <motion.button
