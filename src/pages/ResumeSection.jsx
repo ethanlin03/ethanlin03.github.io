@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar";
 import resume from "../assets/ethan_resume.pdf";
 import { motion } from "framer-motion";
 
-const ResumePage = ({ needNavBar }) => {
+const ResumeSection = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
@@ -28,4 +28,4 @@ const ResumePage = ({ needNavBar }) => {
     )
 };
 
-export default ResumePage;
+export default ResumeSection;

@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar";
 import JobIcon from "../components/JobIcon";
 import { motion } from "framer-motion";
 
-const ExperiencePage = ({ needNavBar }) => {
+const ExperienceSection = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
@@ -15,7 +15,7 @@ const ExperiencePage = ({ needNavBar }) => {
             >
                 Experience
             </motion.h1>
-            <div className="container mx-auto px-4 py-8 flex justify-center mt-10 mb-20">
+            <div className="container max-w-screen mx-auto px-4 py-8 flex justify-center mt-10 mb-20">
                 <div className="border-2 border-gray-300 h-[1120px] z-0"/>
                 <div className="absolute top-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-28">
                     <JobIcon jobTitle="Software Quality Assurance Intern" company="WorkUp" date="October 2024 - February 2025" leftOrRight="left" description={
@@ -82,4 +82,4 @@ const ExperiencePage = ({ needNavBar }) => {
     )
 };
 
-export default ExperiencePage;
+export default ExperienceSection;

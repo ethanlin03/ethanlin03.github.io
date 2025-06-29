@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import AboutPage from './pages/AboutPage'
-import HomePage from './pages/HomePage'
-import ProjectsPage from './pages/ProjectsPage'
-import ExperiencePage from './pages/ExperiencePage'
-import ResumePage from './pages/ResumePage'
-import ContactPage from './pages/ContactPage'
+import AboutPage from './pages/AboutSection'
+import ProjectsPage from './pages/ProjectsSection'
+import ExperiencePage from './pages/ExperienceSection'
+import ResumePage from './pages/ResumeSection'
+import ContactPage from './pages/ContactSection'
+import NavBar from './components/NavBar'
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -25,15 +25,17 @@ function App() {
     <Router>
       <ScrollToTop />
       <div>
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<HomePage/>} />
-          <Route path="/about" element={<AboutPage needNavBar={true} about={true}/>}/>
-          <Route path="/projects" element={<ProjectsPage needNavBar={true}/>} />
-          <Route path="/experience" element={<ExperiencePage needNavBar={true}/>} />
-          <Route path="/resume" element={<ResumePage needNavBar={true}/>}/>
-          <Route path="/contact" element={<ContactPage needNavBar={true} viewHeight={80}/>}/>
-        </Routes>
+        <NavBar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Navigate to="/about" replace />} />
+            <Route path="/about" element={<AboutPage needNavBar={true} about={true}/>}/>
+            <Route path="/projects" element={<ProjectsPage needNavBar={true}/>} />
+            <Route path="/experience" element={<ExperiencePage needNavBar={true}/>} />
+            <Route path="/resume" element={<ResumePage needNavBar={true}/>}/>
+            <Route path="/contact" element={<ContactPage needNavBar={true} viewHeight={80}/>}/>
+          </Routes>
+        </main>
       </div>
     </Router>
   )

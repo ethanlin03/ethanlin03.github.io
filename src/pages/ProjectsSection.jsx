@@ -8,7 +8,7 @@ import rps from "../assets/rps.png";
 import kapechat from "../assets/kapechat.png"
 import { motion } from "framer-motion";
 
-const ProjectsPage = ({ needNavBar }) => {
+const ProjectsSection = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
@@ -76,4 +76,4 @@ const ProjectsPage = ({ needNavBar }) => {
     )
 };
 
-export default ProjectsPage;
+export default ProjectsSection;

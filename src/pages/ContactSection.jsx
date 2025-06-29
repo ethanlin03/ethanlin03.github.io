@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import SendIcon from '@mui/icons-material/Send';
 
-const ContactPage = ( { needNavBar, viewHeight }) => {
+const ContactSection = ( { needNavBar, viewHeight }) => {
     const form = useRef();
     const [showToast, setShowToast] = useState(false);
     const [progress, setProgress] = useState(100);
@@ -56,7 +56,7 @@ const ContactPage = ( { needNavBar, viewHeight }) => {
         <div>
             {needNavBar && <NavBar/>}
             <div className="flex items-center justify-center mb-36" style={{ minHeight: `${viewHeight}vh`}}>
-                <div className="max-w-2xl mx-auto p-8 bg-white rounded-lg shadow-lg relative">
+                <div className="max-w-screen mx-auto p-8 bg-white rounded-lg shadow-lg relative">
                     <h1 className="text-2xl font-bold mb-2 text-center">Contact Me!</h1>
                     <h2 className="text-sm mb-6 text-center">Feel free to contact me directly at through this form or through the links <b>below</b>.</h2>
                     <form ref={form} onSubmit={sendEmail}>
@@ -151,4 +151,4 @@ const ContactPage = ( { needNavBar, viewHeight }) => {
     );
 };
 
-export default ContactPage;
+export default ContactSection;

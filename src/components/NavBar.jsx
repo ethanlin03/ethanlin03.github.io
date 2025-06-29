@@ -6,7 +6,7 @@ import logo from "../assets/e-logo.png";
 
 const NavBar = () => {
     return (
-      <div className="mb-32">
+      <div className="mb-32 max-w-screen mx-auto">
       <nav className="fixed top-0 left-0 w-full bg-white text-gray-800 z-50 shadow-md">
         <div className="flex justify-between items-center px-6 py-6">
           <NavLink
@@ -20,14 +20,13 @@ const NavBar = () => {
               </span>
             </div>
           </NavLink>
-          <div className="flex items-center space-x-10">
+          <div className="flex items-center space-x-10 xs:space-x-0">
             {[
-              { path: '/home', label: 'Home' },
               { path: '/about', label: 'About' },
-              { path: '/projects', label: 'Projects' },
-              { path: '/experience', label: 'Experience' },
-              { path: '/resume', label: 'Resume' },
-              { path: '/contact', label: 'Contact' },
+              // { path: '/projects', label: 'Projects' },
+              // { path: '/experience', label: 'Experience' },
+              // { path: '/resume', label: 'Resume' },
+              // { path: '/contact', label: 'Contact' },
             ].map(({ path, label }) => (
                 <NavLink
                   key={path}
