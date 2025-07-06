@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
     return (
         <div>
-            <div className="max-w-screen">
+            <div className="max-w-3xl mx-auto">
                 <div className="container mx-auto p-4 flex flex-col sm:flex-row items-center gap-10 justify-center">
                     <div className="flex flex-col items-center space-y-2 sm:space-y-6">
                         <motion.img
