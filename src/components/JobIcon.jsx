@@ -42,7 +42,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
                                 viewport={{ once: false }}
                             >
                                 <h1 className="text-xl font-bold">{jobTitle}</h1>
-                                <h1 className="text-md font-semibold mb-4 italic">{company}</h1>
+                                <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
                             </motion.div>
                             
                             <span className="mb-4 text-sm"> {description} </span>
@@ -63,7 +63,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
                                 viewport={{ once: false }}
                             >
                                 <h1 className="text-xl font-bold">{jobTitle}</h1>
-                                <h1 className="text-md font-semibold mb-4 italic">{company}</h1>
+                                <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
                             </motion.div>
                             <span className="mb-4 text-sm">{description}</span>
                         </div>
