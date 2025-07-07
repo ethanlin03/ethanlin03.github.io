@@ -1,5 +1,6 @@
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import { motion } from "framer-motion";
+import WorkUp from "../assets/workup.png"
 
 const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
     return (
@@ -24,7 +25,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
                             viewport={{ once: false }} 
                             className="bg-white border-gray-200 shadow-md border rounded-full flex items-center justify-center h-16 w-16"
                         >
-                            <WorkOutlineIcon className="bg-white rounded-full" />
+                            <WorkOutlineIcon className="bg-white rounded-full"/>
                         </motion.div>
                     </div>
 
