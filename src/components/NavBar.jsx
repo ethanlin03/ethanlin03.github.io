@@ -31,9 +31,9 @@ const NavBar = () => {
                 to="/projects"
                 className="hover:text-gray-400 transition-colors duration-300 font-bold"
             >
-              <div className="flex items-center space-x-3 ">
-                <img src={logo} className="h-10 w-10"/>
-                <span className="text-black font-semibold">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <img src={logo} className="h-8 sm:h-10 aspect-[1]"/>
+                <span className="text-black font-semibold text-sm sm:text-base">
                 Ethan Lin
                 </span>
               </div>
