@@ -1,12 +1,35 @@
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import { motion } from "framer-motion";
-import WorkUp from "../assets/workup.png"
 
-const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
+const JobIcon = ({ jobTitle, company, description, date, leftOrRight, imgsrc }) => {
     return (
         <div>
+            <div className="block 2xl:hidden">
+                <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.2, ease: "easeOut" }} viewport={{ once: false }} className="flex flex-row">
+                    <div 
+                        className="bg-gray-100 bg-opacity-95 max-w-[90vw] h-auto min-h-[260px] shadow-xl z-10 rounded-md p-4 border" 
+                        style={{ boxShadow: '0 4px 4px rgba(0, 0, 0, 0.15)' }}
+                    >
+                        <div className="flex flex-row justify-between">
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1.0, ease: "easeOut" }}
+                                viewport={{ once: false }}
+                            >
+                                <h1 className="text-md lg:text-xl font-bold">{jobTitle}</h1>
+                                <h1 className="text-sm lg:text-base font-semibold italic">{company}</h1>
+                                <h2 className="text-xs lg:text-sm text-gray-500 italic mb-4">{date}</h2>
+                            </motion.div>
+                            <img src={imgsrc} className="h-12 aspect-[1] rounded-full bg-white p-1"/>
+                        </div>
+                        
+                        <span className="mb-4 text-sm"> {description} </span>
+                    </div>
+                </motion.div>
+            </div>
             {leftOrRight === "right" ? (
-                <div className="relative flex flex-row items-top left-[34px]">
+                <div className="hidden 2xl:flex relative flex-row items-top left-[34px]">
                     <motion.span 
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -36,36 +59,42 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight }) => {
                             className="bg-gray-100 bg-opacity-95 w-[450px] h-[260px] shadow-xl z-10 rounded-md p-4 border" 
                             style={{ boxShadow: '0 4px 4px rgba(0, 0, 0, 0.15)' }}
                         >
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 1.0, ease: "easeOut" }}
-                                viewport={{ once: false }}
-                            >
-                                <h1 className="text-xl font-bold">{jobTitle}</h1>
-                                <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
-                            </motion.div>
+                            <div className="flex flex-row justify-between">
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 1.0, ease: "easeOut" }}
+                                    viewport={{ once: false }}
+                                >
+                                    <h1 className="text-xl font-bold">{jobTitle}</h1>
+                                    <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
+                                </motion.div>
+                                <img src={imgsrc} className="h-12 aspect-[1] rounded-full bg-white p-1"/>
+                            </div>
                             
                             <span className="mb-4 text-sm"> {description} </span>
                         </div>
                     </motion.div>
                 </div>
             ) : (
-                <div className="relative flex flex-row items-top right-[34px]">
+                <div className="hidden 2xl:flex relative flex-row items-top right-[34px]">
                     <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1.2, ease: "easeOut" }} viewport={{ once: false }} className="flex flex-row">
                         <div 
                             className="bg-gray-100 bg-opacity-95 w-[450px] h-[260px] shadow-xl z-10 rounded-md p-4 border"
                             style={{ boxShadow: '0 4px 4px rgba(0, 0, 0, 0.15)' }}
                         >
-                            <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 1.0, ease: "easeOut" }}
-                                viewport={{ once: false }}
-                            >
-                                <h1 className="text-xl font-bold">{jobTitle}</h1>
-                                <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
-                            </motion.div>
+                            <div className="flex flex-row justify-between">
+                                <motion.div
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 1.0, ease: "easeOut" }}
+                                    viewport={{ once: false }}
+                                >
+                                    <h1 className="text-xl font-bold">{jobTitle}</h1>
+                                    <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
+                                </motion.div>
+                                <img src={imgsrc} className="h-12 aspect-[1] rounded-full bg-white p-1"/>
+                            </div>
                             <span className="mb-4 text-sm">{description}</span>
                         </div>
 
