@@ -23,8 +23,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <div>
+      <div className="flex-grow">
         <NavBar />
         <main>
           <Routes>

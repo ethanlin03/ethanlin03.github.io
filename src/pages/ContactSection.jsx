@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import NavBar from "../components/NavBar";
 import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";

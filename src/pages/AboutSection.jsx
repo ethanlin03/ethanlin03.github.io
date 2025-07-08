@@ -1,11 +1,8 @@
 import NavBar from "../components/NavBar";
-import me from "../assets/me.png";
+import me from "../assets/me-res2.jpg";
 import uci from "../assets/uci.png";
 import mtsac from "../assets/mtsac.png";
-import GoogleIcon from '@mui/icons-material/Google';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import IconButton from '@mui/material/IconButton';
+import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";
 import Technologies from "../components/Technologies";
 import { motion } from "framer-motion";
 
@@ -13,15 +10,15 @@ const AboutSection = () => {
     return (
         <div>
             <div className="max-w-3xl mx-auto">
-                <div className="container mx-auto p-4 flex flex-col sm:flex-row items-center gap-10 justify-center">
-                    <div className="flex flex-col items-center space-y-2 sm:space-y-6">
+                <div className="container mx-auto max-w-[90vw] flex flex-col sm:flex-row items-center gap-4 justify-center mb-6">
+                    <div className="flex flex-col items-center">
                         <motion.img
                             initial={{ opacity: 0, y: -40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             viewport={{ once: true }}
                             src={me} 
-                            className="w-[80%] max-w-[300px] aspect-square object-cover rounded-full z-0"
+                            className="w-[80%] md:w-[80%] aspect-square object-cover rounded-full z-0"
                             alt="Ethan"
                         />
                         <motion.div 
@@ -29,7 +26,7 @@ const AboutSection = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             viewport={{ once: true }}
-                            className="flex items-center justify-center space-x-4 sm:space-x-8 relative bg-white px-4 py-2 max-w-[250px] border border-black border-opacity-30 shadow-lg rounded-md z-10"
+                            className="flex items-center justify-center space-x-6 relative bg-white px-6 py-2 max-w-[250px] border border-black border-opacity-30 shadow-lg rounded-md z-10 -mt-8 sm:-mt-6"
                         >
                             <motion.a 
                                 initial={{ opacity: 0, x: -40 }}
@@ -38,9 +35,9 @@ const AboutSection = () => {
                                 viewport={{ once: true }}
                                 href="mailto:ethanclin03@gmail.com" target="_blank" rel="noopener noreferrer"
                             >
-                                <IconButton className="hover:bg-gray-200 hover:scale-125">
-                                    <GoogleIcon className="text-red-500" style={{ fontSize: 26 }}/>
-                                </IconButton>
+                                <div className="p-2 rounded-full hover:bg-gray-200 hover:scale-110 transition-transform">
+                                    <FaGoogle className="text-red-500 text-[22px] sm:text-[26px]"/>
+                                </div>
                             </motion.a>
 
                             <motion.a 
@@ -49,10 +46,11 @@ const AboutSection = () => {
                                 transition={{ duration: 0.8, ease: "easeOut" }}
                                 viewport={{ once: true }}
                                 href="https://www.linkedin.com/in/ethanlin03" target="_blank" rel="noopener noreferrer"
+                                
                             >
-                                <IconButton className="hover:bg-gray-200 hover:scale-125">
-                                    <LinkedInIcon className="text-blue-600" style={{ fontSize: 30 }}/>
-                                </IconButton>
+                                <div className="p-2 rounded-full hover:bg-gray-200 hover:scale-110 transition-transform">
+                                    <FaLinkedin className="text-blue-600 text-[26px] sm:text-[30px]" />
+                                </div>
                             </motion.a>
 
                             <motion.a 
@@ -62,9 +60,9 @@ const AboutSection = () => {
                                 viewport={{ once: true }}
                                 href="https://www.github.com/ethanlin03" target="_blank" rel="noopener noreferrer"
                             >
-                                <IconButton className="hover:bg-gray-200 hover:scale-125"> 
-                                    <GitHubIcon className="text-gray-700" style={{ fontSize: 26 }}/>
-                                </IconButton>
+                                <div className="p-2 rounded-full hover:bg-gray-200 hover:scale-110 transition-transform">
+                                    <FaGithub className="text-gray-700 text-[24px] sm:text-[28px]"/>
+                                </div>
                             </motion.a>
                         </motion.div>
                     </div>
@@ -91,8 +89,8 @@ const AboutSection = () => {
                             for creativity and creation.
                         </p>
                         <p className="mb-4">
-                            I've been able to use my skills to create a twist on a classic game, Rock Paper Scissors, 
-                            to creating a website to help track my medications. Through each project, I've been able to build upon my technical skills while pushing 
+                            I've been able to use my skills to create a Rock Paper Scissors AI, 
+                            to an application, KapeChat, where students are able to connect with mentees and foster a professional community. I even spearheaded KapeChat's in-app realtime messaging system. Through each project, I've been able to build upon my technical skills while pushing 
                             my innovativeness and creativity. Let's connect and create fresh, exciting applications 
                             for the world!
                         </p>
@@ -131,7 +129,7 @@ const AboutSection = () => {
                                 <p className="text-base">Aug. 2021 – June 2023</p>
                             </div>
                             <div className="flex flex-col sm:flex-row sm:justify-between">
-                                <p className="text-base text-gray-600">Computer Science (Transfer)</p>
+                                <p className="text-base text-gray-600">Computer Science</p>
                                 <p className="text-sm">Walnut, CA</p>
                             </div>
                         </div>

@@ -28,7 +28,7 @@ const NavBar = () => {
         <nav className="fixed top-0 left-0 w-full bg-white text-gray-800 z-50 shadow-md">
           <div className="flex justify-between items-center px-6 py-6">
             <NavLink
-                to="/projects"
+                to="/about"
                 className="hover:text-gray-400 transition-colors duration-300 font-bold"
             >
               <div className="flex items-center space-x-2 sm:space-x-3">
