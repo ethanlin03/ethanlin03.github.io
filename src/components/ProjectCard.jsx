@@ -1,13 +1,12 @@
 import SkillIcon from "./SkillIcon";
-import { useNavigate } from 'react-router-dom';
 
 const ProjectCard = ({ imageSrc, title, skills, description }) => {
     return (
         <div
-            className="relative flex flex-col md:flex-row w-full max-w-[80rem] rounded-xl bg-white bg-clip-border text-gray-700 shadow-xl max-h-[500px] min-h-[400px]"
+            className="relative flex flex-col md:flex-row w-full max-w-[80rem] rounded-xl bg-white bg-clip-border text-gray-700 shadow-xl h-auto 2xl:max-h-[400px]"
         >
             <div
-                className="relative m-0 overflow-hidden rounded-t-xl md:rounded-r-none md:rounded-l-xl bg-white bg-clip-border text-gray-700 aspect-[4/3] md:aspect-[4] w-full md:w-1/2"
+                className="relative m-0 overflow-hidden rounded-t-xl md:rounded-r-none md:rounded-l-xl bg-white bg-clip-border text-gray-700 w-full md:w-1/2"
             >
                 <img
                     src={imageSrc}
