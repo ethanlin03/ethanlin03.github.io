@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
-import me from "../assets/me-res2.jpg";
+import me from "../assets/me.jpg";
 import uci from "../assets/uci.png";
 import mtsac from "../assets/mtsac.png";
 import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";

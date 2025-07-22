@@ -5,7 +5,8 @@ import goodeats from "../assets/goodeats.png";
 import invitation from "../assets/invitation.png";
 import checkers from "../assets/checkers.svg";
 import rps from "../assets/rps.png";
-import kapechat from "../assets/kapechat.png"
+import kapechat from "../assets/kapechat.png";
+import moviereview from "../assets/movie-review.png";
 import { motion } from "framer-motion";
 
 const ProjectsSection = ({ needNavBar }) => {
@@ -22,6 +23,16 @@ const ProjectsSection = ({ needNavBar }) => {
                 Projects
             </motion.h1>
             <div className="mt-10 flex flex-col items-center gap-8 p-6 lg:p-8 mb-20">
+                <ProjectCard 
+                    imageSrc={moviereview}
+                    title={"Movie Reviews AI"} 
+                    skills={[{ text: "Python" }, { text: "Numpy" }, { text: "Pandas" }, { text: "AI" }]} 
+                    description="Movie Reviews AI is a sentiment analysis project where multiple AI models were developed to classify movie reviews as positive or negative. 
+                    The project leveraged Python along with libraries like NumPy and Pandas for data processing on a dataset of 50,000 reviews. 
+                    A variety of machine learning algorithms were used—including Feedforward Neural Networks, Random Forest, K-Nearest Neighbors (KNN), and Logistic Regression—were implemented and tested to optimize performance.
+                    The models saw an average ~80% accuracy and the highest having ~90% accuracy on test data.
+                    "
+                />
                 <ProjectCard 
                     imageSrc={kapechat}
                     title={"KapeChat"} 

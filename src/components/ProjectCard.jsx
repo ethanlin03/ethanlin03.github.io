@@ -11,7 +11,7 @@ const ProjectCard = ({ imageSrc, title, skills, description }) => {
                 <img
                     src={imageSrc}
                     alt={title}
-                    className="h-full w-full object-cover"
+                    className="w-full object-cover "
                 />
             </div>
             <div className="p-4 md:p-6 flex flex-col justify-start w-full md:w-1/2 relative">
