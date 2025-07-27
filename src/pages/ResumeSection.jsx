@@ -23,7 +23,7 @@ const ResumeSection = ({ needNavBar }) => {
                         title="Resume"
                     />
                     <a 
-                        href="https://drive.google.com/file/d/1EZr_fRK5qhArOi1WfsbA-0d9S5FE-47a/view?usp=sharing" 
+                        href="https://drive.google.com/file/d/1EC0nq10B-WZXB4rZS46Ypd5T8jkQvvvA/view?usp=sharing" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="py-4 px-8 max-w-xs rounded-full hover:bg-gray-200 hover:scale-125 transition bg-blue-500 inline-block sm:hidden text-white text-lg font-semibold"
