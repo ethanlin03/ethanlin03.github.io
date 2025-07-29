@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 const ProjectsSection = ({ needNavBar }) => {
     return (
-        <div>
+        <section id="projects" className="scroll-mt-32">
             {needNavBar && <NavBar/>}
             <motion.h1 
                 initial={{ opacity: 0, y: -60 }}
@@ -83,7 +83,7 @@ const ProjectsSection = ({ needNavBar }) => {
                     Users are able to see their winrate as well as other stats like rounds played."
                 />
             </div>
-        </div>
+        </section>
     )
 };
 

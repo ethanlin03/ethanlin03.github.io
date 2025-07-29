@@ -1,14 +1,14 @@
-import NavBar from "../components/NavBar";
+import NavBar from "./NavBar";
 import me from "../assets/me.jpg";
 import uci from "../assets/uci.png";
 import mtsac from "../assets/mtsac.png";
 import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";
-import Technologies from "../components/Technologies";
+import Technologies from "./Technologies";
 import { motion } from "framer-motion";
 
 const AboutSection = () => {
     return (
-        <div>
+        <section id="about" className="scroll-mt-32">
             <div className="max-w-3xl mx-auto">
                 <div className="container mx-auto max-w-[90vw] flex flex-col sm:flex-row items-center gap-4 justify-center mb-6">
                     <div className="flex flex-col items-center">
@@ -137,7 +137,7 @@ const AboutSection = () => {
                     <Technologies/>
                 </div>
             </div>
-        </div>
+        </section>
     );  
 };
 export default AboutSection;

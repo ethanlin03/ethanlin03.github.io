@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ResumeSection = ({ needNavBar }) => {
     return (
-        <div>
+        <section id="resume" className="scroll-mt-32">
             {needNavBar && <NavBar/>}
             <motion.h1 
                 initial={{ opacity: 0, y: -60 }}
@@ -32,7 +32,7 @@ const ResumeSection = ({ needNavBar }) => {
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
     )
 };
 
