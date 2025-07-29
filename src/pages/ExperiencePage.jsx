@@ -6,7 +6,7 @@ import NSF from "../assets/nsf.png";
 import MakeAWish from "../assets/makeawish.png";
 import Walgreens from "../assets/walgreens.png";
 
-const ExperienceSection = ({ needNavBar }) => {
+const ExperiencePage = ({ needNavBar }) => {
     return (
         <div>
             {needNavBar && <NavBar/>}
@@ -109,4 +109,4 @@ const ExperienceSection = ({ needNavBar }) => {
     )
 };
 
-export default ExperienceSection;
+export default ExperiencePage;

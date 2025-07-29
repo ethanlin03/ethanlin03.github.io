@@ -6,7 +6,7 @@ import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";
 import Technologies from "../components/Technologies";
 import { motion } from "framer-motion";
 
-const AboutSection = () => {
+const AboutPage = () => {
     return (
         <div>
             <div className="max-w-3xl mx-auto">
@@ -140,4 +140,4 @@ const AboutSection = () => {
         </div>
     );  
 };
-export default AboutSection;
+export default AboutPage;

@@ -1,24 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import AboutPage from './pages/AboutSection'
-import ProjectsPage from './pages/ProjectsSection'
-import ExperiencePage from './pages/ExperienceSection'
-import ResumePage from './pages/ResumeSection'
-import ContactPage from './pages/ContactSection'
+import AboutPage from './pages/AboutPage'
+import ProjectsPage from './pages/ProjectsPage'
+import ExperiencePage from './pages/ExperiencePage'
+import ResumePage from './pages/ResumePage'
+import ContactPage from './pages/ContactPage'
 import NavBar from './components/NavBar'
-
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-};
-
 
 function App() {
   return (

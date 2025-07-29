@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 
-const ContactSection = ( { needNavBar, viewHeight }) => {
+const ContactPage = ( { needNavBar, viewHeight }) => {
     const form = useRef();
     const [showToast, setShowToast] = useState(false);
     const [progress, setProgress] = useState(100);
@@ -142,4 +142,4 @@ const ContactSection = ( { needNavBar, viewHeight }) => {
     );
 };
 
-export default ContactSection;
+export default ContactPage;
