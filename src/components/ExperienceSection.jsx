@@ -8,7 +8,7 @@ import Walgreens from "../assets/walgreens.png";
 
 const ExperienceSection = ({ needNavBar }) => {
     return (
-        <div>
+        <section id="experience" className="scroll-mt-28">
             {needNavBar && <NavBar/>}
             <motion.h1 
                 initial={{ opacity: 0, y: -60 }}
@@ -105,7 +105,7 @@ const ExperienceSection = ({ needNavBar }) => {
                         </motion.ul>}/>
                 </div>
             </div>
-        </div>
+        </section>
     )
 };
 

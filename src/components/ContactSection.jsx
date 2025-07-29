@@ -50,7 +50,7 @@ const ContactSection = ( { needNavBar, viewHeight }) => {
     }, [showToast]);
 
     return (
-        <div>
+        <section id="contact">
             {needNavBar && <NavBar/>}
             <div className="flex items-center justify-center mb-36" style={{ minHeight: `${viewHeight}vh`}}>
                 <div className="max-w-[80vw] sm:max-w-screen mx-auto p-8 bg-white rounded-lg shadow-lg">
@@ -138,7 +138,7 @@ const ContactSection = ( { needNavBar, viewHeight }) => {
                     )}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
