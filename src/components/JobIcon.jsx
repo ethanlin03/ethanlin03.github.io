@@ -48,7 +48,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight, imgsrc }) 
                             viewport={{ once: false }} 
                             className="bg-white border-gray-200 shadow-md border rounded-full flex items-center justify-center h-16 w-16"
                         >
-                            <WorkOutlineIcon className="bg-white rounded-full"/>
+                            <img src={imgsrc} className="h-12 aspect-[1] rounded-full bg-white p-1"/>
                         </motion.div>
                     </div>
 
@@ -69,7 +69,6 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight, imgsrc }) 
                                     <h1 className="text-xl font-bold">{jobTitle}</h1>
                                     <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
                                 </motion.div>
-                                <img src={imgsrc} className="h-12 aspect-[1] rounded-full bg-white p-1"/>
                             </div>
                             
                             <span className="mb-4 text-sm"> {description} </span>
@@ -93,7 +92,6 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight, imgsrc }) 
                                     <h1 className="text-xl font-bold">{jobTitle}</h1>
                                     <h1 className="text-base font-semibold mb-4 italic">{company}</h1>
                                 </motion.div>
-                                <img src={imgsrc} className="h-12 aspect-[1] rounded-full bg-white p-1"/>
                             </div>
                             <span className="mb-4 text-sm">{description}</span>
                         </div>
@@ -109,7 +107,7 @@ const JobIcon = ({ jobTitle, company, description, date, leftOrRight, imgsrc }) 
                             viewport={{ once: false }} 
                             className="bg-white border-gray-200 shadow-md border rounded-full flex items-center justify-center h-16 w-16"
                         >
-                            <WorkOutlineIcon className="bg-white rounded-full" />
+                            <img src={imgsrc} className="h-12 aspect-[1] rounded-full bg-white p-1"/>
                         </motion.div>
                     </div>
 
