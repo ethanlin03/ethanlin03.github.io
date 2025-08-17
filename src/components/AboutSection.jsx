@@ -83,12 +83,12 @@ const AboutSection = () => {
                         >
                             About Me
                         </motion.h1>
-                        <p className="mb-4 text-sm">
+                        <p className="mb-4">
                             Hi, I'm Ethan! I'm a Computer Science student at the University of California, Irvine. 
                             My journey for programming started in 2015, where my curiosity for games met my love 
                             for creativity and creation.
                         </p>
-                        <p className="mb-4 text-sm">
+                        <p className="mb-4">
                             I've been able to use my skills to create a Rock Paper Scissors AI, 
                             to an application, KapeChat, where students are able to connect with mentees and foster a professional community. I even spearheaded KapeChat's in-app realtime messaging system. Through each project, I've been able to build upon my technical skills while pushing 
                             my innovativeness and creativity. Let's connect and create fresh, exciting applications 

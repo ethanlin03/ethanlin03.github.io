@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans'], // makes Roboto the default "sans" font
+        sans: ['Inter', 'sans'],
       },
     },
   },
