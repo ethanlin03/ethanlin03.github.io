@@ -5,6 +5,7 @@ import WorkUp from "../assets/workup.png";
 import NSF from "../assets/nsf.png";
 import MakeAWish from "../assets/makeawish.png";
 import Walgreens from "../assets/walgreens.png";
+import Fox from "../assets/fox.png";
 
 const ExperienceSection = ({ needNavBar }) => {
     return (
@@ -22,6 +23,24 @@ const ExperienceSection = ({ needNavBar }) => {
             <div className="max-w-screen min-h-screen mx-auto px-4 py-8 mt-10 mb-32 relative">
                 <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 border-l-2 border-gray-300 z-0" />
                 <div className="flex flex-col items-center gap-12 sm:gap-20 2xl:gap-28 z-10">
+                    <JobIcon jobTitle="Product Quality Analyst" company="Fox Corporation" date="August 2025 - December 2025" leftOrRight="right" imgsrc={Fox} description={
+                        <motion.ul 
+                            initial={{ opacity: 0, x: -40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            viewport={{ once: false }} 
+                            className="list-disc pl-5"
+                        >
+                            <li>
+                                Engineered and optimized comprehensive cross-platform automated test suites using Appium, Playwright, and CodeceptJS
+                            </li>
+                            <li>
+                                Manually reviewed AI-generated video clips to ensure accuracy, quality, and alignment with product standards
+                            </li>
+                            <li>
+                                Logged bugs and collaborated with engineering teams to validate fixes and ensured smooth regression testing cycles
+                            </li>
+                        </motion.ul>}/>
                     <JobIcon jobTitle="Software Quality Assurance Intern" company="WorkUp" date="October 2024 - February 2025" leftOrRight="left" imgsrc={WorkUp} description={
                         <motion.ul 
                             initial={{ opacity: 0, x: -40 }}
