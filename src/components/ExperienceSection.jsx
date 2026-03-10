@@ -6,6 +6,7 @@ import NSF from "../assets/nsf.png";
 import MakeAWish from "../assets/makeawish.png";
 import Walgreens from "../assets/walgreens.png";
 import Fox from "../assets/fox.png";
+import Panasonic from "../assets/panasonic.png";
 
 const ExperienceSection = ({ needNavBar }) => {
     return (
@@ -23,6 +24,24 @@ const ExperienceSection = ({ needNavBar }) => {
             <div className="max-w-screen min-h-screen mx-auto px-4 py-8 mt-10 mb-32 relative">
                 <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 border-l-2 border-gray-300 z-0" />
                 <div className="flex flex-col items-center gap-12 sm:gap-20 2xl:gap-28 z-10">
+                    <JobIcon jobTitle="MTS Tester" company="Panasonic Avionics Corporation" date="December 2025 - Present" leftOrRight="left" imgsrc={Panasonic} description={
+                        <motion.ul 
+                            initial={{ opacity: 0, x: -40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            viewport={{ once: false }} 
+                            className="list-disc pl-5"
+                        >
+                            <li>
+                                Performing deep-dive technical triage on system failures through analyzing Linux kernel logs, SQL database entries, and etc.
+                            </li>
+                            <li>
+                                Managing test racks to simulate full aircraft cabin environments through validation of the integration of LRUs, seatback displays, and other hardware
+                            </li>
+                            <li>
+                                Working on end-to-end lifecycle testing within Jira, from initial setup to closure and customer delivery.
+                            </li>
+                        </motion.ul>}/>
                     <JobIcon jobTitle="Product Quality Analyst" company="Fox Corporation" date="August 2025 - December 2025" leftOrRight="right" imgsrc={Fox} description={
                         <motion.ul 
                             initial={{ opacity: 0, x: -40 }}
