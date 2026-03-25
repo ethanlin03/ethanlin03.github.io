@@ -107,12 +107,12 @@ const AboutSection = () => {
                         Education
                     </motion.h1>
 
-                    <div className="flex flex-col sm:flex-row items-start mb-4">
+                    <div className="flex flex-col sm:flex-row items-start mb-8">
                         <img src={uci} alt="UCI Icon" className="w-12 h-12 mr-4 mt-2" />
                         <div className="flex-1">
                             <div className="flex flex-col sm:flex-row sm:justify-between">
                                 <h2 className="text-lg font-semibold">University of California, Irvine</h2>
-                                <p className="text-base">Sep. 2023 – Present</p>
+                                <p className="text-base">Sep. 2023 – June 2025</p>
                             </div>
                             <div className="flex flex-col sm:flex-row sm:justify-between">
                                 <p className="text-base text-gray-600">Bachelor of Science in Computer Science</p>
@@ -120,20 +120,7 @@ const AboutSection = () => {
                             </div>
                         </div>
                     </div>
-
-                    <div className="flex flex-col sm:flex-row items-start mb-8">
-                        <img src={mtsac} alt="MtSac Icon" className="w-12 h-12 mr-4 mt-2" />
-                        <div className="flex-1">
-                            <div className="flex flex-col sm:flex-row sm:justify-between">
-                                <h2 className="text-lg font-semibold">Mount San Antonio College</h2>
-                                <p className="text-base">Aug. 2021 – June 2023</p>
-                            </div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between">
-                                <p className="text-base text-gray-600">Computer Science</p>
-                                <p className="text-sm">Walnut, CA</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <Technologies/>
                 </div>
             </div>
